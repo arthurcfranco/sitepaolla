@@ -75,7 +75,7 @@ button {
     align-items: center;
     justify-content: space-between;
     min-height: 84px;
-    gap: 20px
+    gap: 15px
 }
 
 .brand {
@@ -109,8 +109,8 @@ button {
 
 .nav-cta {
     border: 1px solid var(--terracotta);
-    padding: 10px 18px;
-    border-radius: 40px
+    padding: 10px 12px;
+    border-radius: 20px
 }
 
 .menu-toggle {
@@ -122,9 +122,11 @@ button {
 }
 
 .hero {
-    background: var(--cream);
-    overflow: hidden;
-    padding: 30px 0 40px
+    background: #e9cdb8;
+    min-height: 800px;
+    display: flex;
+    align-items: flex-start;
+    padding: 90px 0 50px;
 }
 
 .hero-grid {
@@ -134,25 +136,43 @@ button {
     align-items: center
 }
 
+.hero-titulos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .eyebrow {
     display: block;
     color: var(--rust);
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: 2.4px;
     margin-bottom: 20px
 }
 
-.hero h1, h2 {
-    font-family: 'Playfair Display', serif;
+.hero h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(28px, 3vw, 42px);
     font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: -1.6px
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
 }
 
-.hero h1 {
-    font-size: 52px;
-    margin: 0 0 25px
+.hero h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 2.5vw, 36px);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+}
+
+section:not(.hero) h2 {
+    line-height: 1.15;
+    letter-spacing: -0.03em;
 }
 
 h2 {
@@ -305,13 +325,19 @@ h1 em, h2 em {
 }
 
 .services {
+    padding-top: 135px;
+    padding-bottom: 60px;
     background: var(--cream)
 }
 
 .section-heading {
     text-align: center;
     max-width: 690px;
-    margin: 0 auto 55px
+    margin: 0 auto 40px;
+}
+
+.services .section-heading h2 {
+    margin-bottom: 5px;
 }
 
 .services .cards {
@@ -653,4 +679,207 @@ details p {
 
 .services .section-heading p {
     font-size: 19px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media (min-width: 951px) {
+    .hero-visual {
+        justify-self: end;
+        transform: translateX(30px);
+    }
+}
+
+/* ===== AVALIAÇÕES GOOGLE ===== */
+
+.avaliacoes {
+    padding: 90px 0;
+    background: #f7f1eb;
+    text-align: center;
+}
+
+.avaliacoes-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 400;
+    margin: 12px 0;
+}
+
+.avaliacoes-header p {
+    color: var(--muted);
+}
+
+.avaliacoes-resumo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 30px 0 40px;
+    flex-wrap: wrap;
+}
+
+.avaliacoes-resumo strong {
+    font-size: 28px;
+}
+
+.estrelas {
+    color: #e6a800;
+    letter-spacing: 2px;
+}
+
+.avaliacoes-carrossel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avaliacoes-janela {
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+}
+
+.avaliacoes-trilha {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.avaliacao-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #eadfd6;
+    border-radius: 18px;
+    padding: 28px;
+    text-align: left;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.avaliacao-card .estrelas {
+    font-size: 18px;
+}
+
+.avaliacao-texto {
+    font-size: 15px;
+    line-height: 1.7;
+    flex: 1;
+}
+
+.avaliacao-autor {
+    font-weight: 600;
+    margin-top: auto;
+}
+
+.avaliacao-data {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.avaliacao-seta {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border: 1px solid #c9a998;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    color: #98563f;
+}
+
+.avaliacao-seta:hover {
+    background: #98563f;
+    color: white;
+}
+
+.avaliacao-seta:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.avaliacoes-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin: 28px 0;
+}
+
+.avaliacoes-indicadores button {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #c9b7aa;
+    cursor: pointer;
+}
+
+.avaliacoes-indicadores button.ativo {
+    background: #98563f;
+}
+
+.avaliacoes-link {
+    display: inline-block;
+    color: #98563f;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* Celular */
+
+@media (max-width: 720px) {
+
+    .avaliacoes {
+        padding: 60px 0;
+    }
+
+    .avaliacao-card {
+        flex-basis: 100%;
+        padding: 22px;
+    }
+
+    .avaliacoes-carrossel {
+        gap: 8px;
+    }
+
+    .avaliacao-seta {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .avaliacoes-trilha {
+        transition: none;
+    }
+}
+
+/* Card + imagem */
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.service-item .service-card {
+    flex: 1;
+}
+
+/* Imagens abaixo dos cards */
+
+.service-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
 }

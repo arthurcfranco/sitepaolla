@@ -7,20 +7,31 @@
     <meta name="description"
           content="Paolla Simioli, psicóloga clínica em Campo Grande - MS. Psicoterapia presencial e online com acolhimento e escuta atenta. CRP 14/08831-8.">
     <title>Paolla Simioli | Psicóloga Clínica em Campo Grande - MS</title>
+
+    <!-- Fontes testes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+          rel="stylesheet">
+
+    <!-- Fontes antigas
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
           rel="stylesheet">
+     -->
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-<header class="header" id="inicio">
+<header class="header">
     <div class="container nav">
-        <a class="brand" href="#inicio" aria-label="Paolla Simioli, início"><span
-                class="brand-name">Paolla Simioli</span><span
-                class="brand-sub">PSICÓLOGA CLÍNICA · CRP 14/08831-8</span></a>
+        <a class="brand" href="#inicio" aria-label="Voltar ao início">
+            <span class="brand-name">Paolla Simioli</span>
+            <span class="brand-sub">PSICÓLOGA CLÍNICA · CRP 14/08831-8</span>
+        </a>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰
         </button>
         <nav id="menu" class="menu" aria-label="Navegação principal">
@@ -30,11 +41,11 @@
     </div>
 </header>
 <main id="conteudo">
-    <section class="hero section">
+    <section class="hero section" id="inicio">
         <div class="container hero-grid">
-            <div class="hero-copy"><span class="eyebrow">PSICOTERAPIA PRESENCIAL E ONLINE</span>
-                <h1>Um espaço seguro para <strong><em>autoconhecimento, acolhimento e reflexão.</em></strong></h1>
-                <p>Psicoterapia individual presencial e online para adultos.</p>
+            <div class="hero-titulos">
+            <h1> Psicoterapia presencial e online em Campo Grande</h1>
+            <h2> Um espaço para olhar para si e compreender suas experiências. </h2>
                 <div class="actions"><a class="btn btn-primary"
                                         href="https://wa.me/5567998229993?text=Ol%C3%A1%2C%20Paolla%21%20Gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos."
                                         target="_blank" rel="noopener noreferrer">Agendar uma conversa ↗</a><a
@@ -42,7 +53,7 @@
                 <div class="hero-note"><span class="dot"></span> Atendimento a partir de agendamento prévio</div>
             </div>
             <div class="hero-visual">
-                <div class="photo-frame"><img src="fotos/imagem paolla.avif" alt="Retrato da psicóloga Paolla Simioli"
+                <div class="photo-frame"><img src="fotos/imagem paolla 2.avif" alt="Retrato da psicóloga Paolla Simioli"
                                               fetchpriority="high"></div>
                 <div class="photo-label">Cuidar de si também é um caminho.</div>
             </div>
@@ -52,7 +63,7 @@
         <div class="container split">
 
             <div class="secondary-photo">
-                <img src="fotos/imagem paolla 2.avif"
+                <img src="fotos/imagem paolla.avif"
                      alt="Paolla Simioli, psicóloga clínica"
                      loading="lazy">
             </div>
@@ -72,25 +83,54 @@
 
         </div>
     </section>
-    <section class="section services" id="atendimentos">
-        <div class="container">
-            <div class="section-heading"><span class="eyebrow">COMO POSSO TE ACOMPANHAR</span>
-                <h2>Um cuidado que se adapta <em>a você.</em></h2>
-                <p>Atendimentos individuais em um ambiente de respeito e confidencialidade.</p></div>
-            <div class="cards">
-                <article class="service-card"><span class="card-number">01 /</span>
+
+<section class="section services" id="atendimentos">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">COMO POSSO TE ACOMPANHAR</span>
+            <h2>Um cuidado que se adapta <em>a você.</em></h2>
+            <p>Atendimentos individuais em um ambiente de respeito e confidencialidade.</p>
+        </div>
+
+        <div class="cards">
+
+            <!-- Atendimento presencial -->
+            <div class="service-item">
+                <article class="service-card">
+                    <span class="card-number">01 /</span>
                     <div class="service-icon">⌂</div>
                     <h3>Psicoterapia presencial</h3>
-                    <p>Um espaço de acolhimento e escuta em Campo Grande, MS, com horários previamente agendados.</p><a
-                            href="#contato">Saiba como agendar ↗</a></article>
-                <article class="service-card"><span class="card-number">02 /</span>
+                    <p>Um espaço de acolhimento e escuta em Campo Grande, MS, com horários previamente agendados.</p>
+                    <a href="#contato">Saiba como agendar ↗</a>
+                </article>
+
+                <img
+                    class="service-image"
+                    src="fotos/imagem presencial.png"
+                    alt="Ilustração do consultório de psicoterapia presencial"
+                    loading="lazy">
+            </div>
+
+            <!-- Atendimento online -->
+            <div class="service-item">
+                <article class="service-card">
+                    <span class="card-number">02 /</span>
                     <div class="service-icon">◌</div>
                     <h3>Psicoterapia online</h3>
-                    <p>Encontros por videochamada para que você possa realizar seu processo terapêutico em um ambiente
-                        privado e confortável.</p><a href="#contato">Saiba como agendar ↗</a></article>
+                    <p>Encontros por videochamada para que você possa realizar seu processo terapêutico em um ambiente privado e confortável.</p>
+                    <a href="#contato">Saiba como agendar ↗</a>
+                </article>
+
+                <img
+                    class="service-image"
+                    src="fotos/imagem online.png"
+                    alt="Ilustração de atendimento psicológico por videochamada"
+                    loading="lazy">
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
     <section class="section concerns" id="queixas">
         <div class="container split compact">
             <div><span class="eyebrow">CADA HISTÓRIA IMPORTA</span>
@@ -104,7 +144,7 @@
     </section>
     <section class="section gestalt" id="gestalt">
         <div class="container gestalt-inner"><span class="eyebrow">MINHA ABORDAGEM</span>
-            <h2> Como funciona a <em>Gestalt-terapia</em> na clinica?</h2>
+            <h2> Como funciona a <em>Gestalt-terapia</em> na clínica?</h2>
             <p> Na clínica gestáltica, enxergamos todos os indivíduos como seres de potencialidades, acreditamos que as
                 pessoas têm todas as habilidades necessárias para solucionar seus problemas ou confrontar suas
                 dificuldades. No entanto, muitas vezes durante nossa vida, algo interrompe esse processo, fazendo com
@@ -114,6 +154,57 @@
                 afetando a vida do paciente, dando o apoio necessário para que ele encontre maneiras mais criativas de
                 resolver o problema ou a crise que está enfrentando.</p></div>
     </section>
+
+    <section class="avaliacoes" id="avaliacoes">
+    <div class="container">
+
+        <div class="avaliacoes-header">
+            <span class="eyebrow">AVALIAÇÕES NO GOOGLE</span>
+            <h2>O que dizem sobre meu trabalho</h2>
+            <p>Confira as avaliações publicadas no Google.</p>
+        </div>
+
+        <div class="avaliacoes-resumo">
+            <strong>5,0</strong>
+            <span class="estrelas">★★★★★</span>
+            <span>11 avaliações no Google</span>
+        </div>
+
+        <div class="avaliacoes-carrossel">
+
+            <button class="avaliacao-seta anterior"
+                    type="button"
+                    aria-label="Avaliação anterior">
+                &#10094;
+            </button>
+
+            <div class="avaliacoes-janela">
+                <div class="avaliacoes-trilha" id="avaliacoes-trilha">
+                    <!-- Cards inseridos pelo JavaScript -->
+                </div>
+            </div>
+
+            <button class="avaliacao-seta proxima"
+                    type="button"
+                    aria-label="Próxima avaliação">
+                &#10095;
+            </button>
+
+        </div>
+
+        <div class="avaliacoes-indicadores"
+             id="avaliacoes-indicadores"></div>
+
+        <a class="avaliacoes-link"
+           href="https://www.google.com/search?q=paolla+simioli"
+           target="_blank"
+           rel="noopener noreferrer">
+            Ver avaliações no Google ↗
+        </a>
+
+    </div>
+</section>
+
     <section class="section faq" id="duvidas">
         <div class="container faq-grid">
             <div><span class="eyebrow">PERGUNTAS FREQUENTES</span>
@@ -129,11 +220,12 @@
                     <p>É um momento para nos conhecermos, conversar sobre o que motivou sua busca pela terapia e
                         esclarecer dúvidas sobre o processo, horários e valores.</p></details>
                 <details>
-                    <summary>Como funciona o atendimento online?</summary>
-                    <p>
-                        As sessões são realizadas por videochamada, em dia e horário previamente combinados pelo
-                        WhatsApp ou telefone.
-                        Para o atendimento, é necessário ter um celular ou computador com internet estável, bateria
+                    <summary>Como funciona o atendimento?</summary>
+                    <p>Atualmente estou conduzindo minhas consultas de forma presencial e virtual, por meio de
+                        videochamadas pela plataforma do Google Meet em dia e horário previamente combinados pelo
+                        WhatsApp ou telefone. <br>
+                        Se você optar pelo online, é necessário ter um celular ou computador com internet estável,
+                        bateria
                         suficiente e, preferencialmente, fones de ouvido com microfone.
                         Escolha um ambiente tranquilo e reservado, onde possa conversar com privacidade e segurança. As
                         sessões não são gravadas, preservando o sigilo e a confidencialidade do atendimento.</p>
@@ -151,7 +243,19 @@
                         um ambiente reservado e seguro para que você possa compartilhar suas experiências com
                         tranquilidade e confiança.</p></details>
                 <details>
-                    <summary>Como funcionam valores e reagendamentos?</summary>
+                    <summary>Qual o investimento?</summary>
+                    <p>Para a primeira sessão, é solicitado que o pagamento seja feito antecipadamente, por meio de
+                        transferência bancária ou Pix, e posteriormente, por agendamento.
+                        O valor do investimento por consulta será informado após o contato inicial, quando houver um
+                        entendimento completo da queixa do paciente.
+                        A maioria dos convênios oferece a opção de reembolso para sessões de psicoterapia.
+                        Recomendo que você verifique se o seu plano de saúde possui cobertura para psicoterapia e entre
+                        em contato com o convênio para obter informações sobre o valor do reembolso por consulta. Dessa
+                        forma, você poderá pagar o valor da sessão e eu fornecerei um recibo em conformidade com os
+                        requisitos exigidos para que você possa enviá-lo ao convênio e receber o reembolso
+                        correspondente ao valor da sessão.</p></details>
+                <details>
+                    <summary>Como funciona o reagendamento?</summary>
                     <p>Para desmarcar uma sessão, é necessário fazê-lo com um mínimo de 24 horas de antecedência, caso
                         contrário, a sessão será cobrada normalmente. A sessão poderá ser remarcada com base na
                         disponibilidade de agenda.</p></details>

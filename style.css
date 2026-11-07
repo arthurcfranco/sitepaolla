@@ -883,3 +883,46 @@ details p {
     object-fit: cover;
     border-radius: 12px;
 }
+
+.hero-note {
+    color: #665b55;
+}
+
+.card-number {
+    color: var(--rust);
+}
+
+.gestalt h2 em {
+    color: var(--rust);
+}
+
+#avaliacoes-indicadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+#avaliacoes-indicadores button {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#avaliacoes-indicadores button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #b9aaa0;
+}
+
+#avaliacoes-indicadores button.ativo::after {
+    background: var(--rust);
+}

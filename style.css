@@ -229,6 +229,11 @@ h1 em, h2 em {
     margin-top: 18px
 }
 
+.btn-outline:hover {
+    background: var(--rust);
+    color: #fff;
+}
+
 .text-link {
     font-size: 13px;
     font-weight: 700

@@ -140,6 +140,32 @@ button {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-titulos::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: -60px;
+    right: -170px;
+
+    background: url("fotos/espirais paolla.png") center / contain no-repeat;
+    opacity: 0.25;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@media (max-width: 720px) {
+    .hero-titulos::before {
+        width: 180px;
+        height: 180px;
+        top: -20px;
+        right: 0;
+        opacity: 0.15;
+    }
 }
 
 .eyebrow {
@@ -412,13 +438,42 @@ h1 em, h2 em {
     text-align: center
 }
 
-.gestalt-inner {
-    max-width: 800px
-}
-
 .gestalt p {
     font-size: 17px;
     color: #5f5149
+}
+
+.gestalt-inner {
+    position: relative;
+    max-width: 800px
+}
+
+.gestalt-decoracao {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    left: -280px;
+    top: 180px;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+@media (max-width: 720px) {
+    .gestalt-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gestalt-decoracao {
+        display: block;
+        position: static;
+        order: 4;
+        width: 200px;
+        height: auto;
+        margin: 20px auto 0;
+        opacity: 0.35;
+    }
 }
 
 .faq-grid {
@@ -689,6 +744,40 @@ details p {
 .about-text p {
     font-size: 18px;
     line-height: 1.8;
+}
+
+#sobre .about-text {
+    position: relative;
+    isolation: isolate;
+}
+
+#sobre .about-text::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    right: 0;
+    bottom: -130px;
+
+    background: url("fotos/espirais paolla 2.png") center / contain no-repeat;
+    opacity: 0.25;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@media (max-width: 720px) {
+    #sobre .about-text {
+        padding-bottom: 110px;
+    }
+
+    #sobre .about-text::after {
+        display: block;
+        width: 200px;
+        height: 200px;
+        right: 0;
+        bottom: -10px;
+        opacity: 0.25;
+    }
 }
 
 @media (min-width: 951px) {

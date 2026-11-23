@@ -8,7 +8,7 @@
     --paper: #fffcf8;
     --sand: #efe3d8;
     --terracotta: #b66f55;
-    --rust: #995740;
+    --rust: #512010;
     --ink: #352f2c;
     --muted: #766c66;
     --line: #e4d8ce;
@@ -28,6 +28,14 @@ body {
     background: var(--paper);
     color: var(--ink);
     font: 16px/1.7 "DM Sans", sans-serif;
+}
+
+p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 a {
@@ -76,12 +84,16 @@ h2 {
     font-weight: 600;
     font-size: clamp(37px, 4vw, 56px);
     margin: 0 0 25px;
-    color: #9C5842;
+    color: var(--rust)
 }
 
-h1 em, h2 em {
-    color: var(--terracotta);
+
+h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-style: italic;
     font-weight: 400;
+    color: var(--rust);
 }
 
 .section-heading {
@@ -90,11 +102,6 @@ h1 em, h2 em {
     margin: 0 auto 40px;
 }
 
-h3 {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
-    font-size: 25px;
-}
 
 /* ============ CABEÇALHO E NAVEGAÇÃO ============ */
 
@@ -224,8 +231,12 @@ h3 {
     margin-top: 0;
 }
 
+.hero h2.hero-subtitulo {
+    color: var(--rust);
+}
+
+
 .hero-copy > p {
-    font-size: 20px;
     max-width: 510px;
     color: var(--muted);
     text-align: justify;
@@ -331,8 +342,6 @@ h3 {
 }
 
 .hero-paragraph {
-    font-size: 17px;
-    line-height: 1.5;
     max-width: 570px;
     margin: 0;
     color: #5f5149;
@@ -362,15 +371,6 @@ h3 {
     margin: auto;
 }
 
-.psychotherapy-inner p {
-    font-size: 17px;
-    color: var(--muted);
-    line-height: 1.5;
-    margin: 0 0 12px;
-    text-align: justify;
-}
-
-
 .psychotherapy .container {
     position: relative;
     max-width: 1150px;
@@ -381,18 +381,16 @@ h3 {
 }
 
 .psychotherapy h3 {
-    margin-bottom: 20px;
     max-width: 650px;
-    white-space: normal;
+    line-height: 1.2;
 }
 
 .psychotherapy p {
     position: relative;
     z-index: 1;
     max-width: 650px;
-    font-size: 18px;
-    line-height: 1.25;
     margin: 0 0 8px;
+    color: var(--muted);
     text-align: justify;
 }
 
@@ -425,9 +423,7 @@ h3 {
 }
 
 .gestalt p {
-    font-size: 18px;
     color: #5f5149;
-    line-height: 1.25;
     margin: 0 0 8px;
     text-align: justify;
 }
@@ -466,13 +462,12 @@ h3 {
 /* ============ QUANDO PROCURAR PSICOTERAPIA ============ */
 
 #queixas h2 {
-    font-size: 40px;
+    font-size: 35px;
 }
 
-#queixas p {
-    font-size: 18px;
+#queixas p,
+#sobre p {
     color: #5f5149;
-    line-height: 1.25;
     margin: 0 0 8px;
     text-align: justify;
 }
@@ -507,13 +502,15 @@ h3 {
 
 .concerns-decoracao {
     position: absolute;
-    width: 280px;
+    width: 350px;
     height: auto;
-    right: 15%;
-    bottom: 100px;
+    left: 22%;
+    right: auto;
+    bottom: 150px;
     opacity: 0.8;
     pointer-events: none;
 }
+
 
 .concerns .compact {
     display: block;
@@ -538,15 +535,15 @@ h3 {
     text-align: center;
     position: relative;
     margin-top: 28px;
-    left: 200px;
+    left: 400px;
 }
 
 #queixas .chips {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-    max-width: 850px;
-    margin: 30px auto;
+    max-width: 750px;
+    margin: 30px 0 30px auto;
 }
 
 #queixas .chips span {
@@ -576,18 +573,10 @@ h3 {
     font-size: 40px;
 }
 
-#sobre p {
-    font-size: 18px;
-    color: #5f5149;
-    line-height: 1.25;
-    margin: 0 0 8px;
-    text-align: justify;
-}
-
 .split {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 110px;
+    gap: 80px;
     align-items: center;
 }
 
@@ -612,9 +601,17 @@ h3 {
     margin-top: 8px;
 }
 
+.about-text h2 {
+    margin-bottom: 15px;
+}
+
+.about-text h3 {
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
 .about-text p {
-    font-size: 18px;
-    line-height: 1.8;
+    margin: 0 0 8px;
     text-align: justify;
 }
 
@@ -685,7 +682,6 @@ h3 {
 }
 
 .service-card p {
-    font-size: 18px;
     color: var(--muted);
     margin: 0 0 20px;
     text-align: justify;
@@ -724,11 +720,11 @@ h3 {
 /* ============ CONTATO ============ */
 
 #contato h2 {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 #contato h3 {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #contato p {
@@ -793,14 +789,13 @@ h3 {
 
 .avaliacoes-header h2 {
     font-family: "Cormorant Garamond", serif;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 600;
     margin: 12px 0;
 }
 
 .avaliacoes-header p {
     color: var(--muted);
-    text-align: justify;
 }
 
 .avaliacoes-resumo {
@@ -1004,9 +999,7 @@ details[open] summary:after {
 
 details p {
     color: var(--muted);
-    font-size: 15px;
     margin: 15px 0 0;
-    text-align: justify;
 }
 
 /* ============ RODAPÉ ============ */
@@ -1030,10 +1023,10 @@ details p {
     display: block;
 }
 
-.footer span, .footer p {
+.footer span,
+.footer p {
     font-size: 12px;
     color: #d5c4b9;
-    text-align: justify;
 }
 
 .footer .emergency {
@@ -1058,7 +1051,6 @@ details p {
 }
 
 .intro-band p {
-    font: italic 24px/1.5 "Playfair Display", serif;
     max-width: 800px;
     margin: auto;
     text-align: justify;
@@ -1105,33 +1097,30 @@ details p {
     .container {
         width: min(100% - 36px, 520px);
     }
+
     .psychotherapy .container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .psychotherapy h2,
     .psychotherapy h3,
     .psychotherapy p {
-    max-width: 100%;
-    width: 100%;
-    text-align: left;
-    }
-
-    .psychotherapy h2 {
-    font-size: 32px;
-    }
-
-    .psychotherapy h3 {
-    font-size: 22px;
-    line-height: 1.4;
+        max-width: 100%;
+        width: 100%;
     }
 
     .psychotherapy p {
-    font-size: 16px;
-    line-height: 1.5;
         text-align: justify;
+    }
+
+    .psychotherapy h2 {
+        font-size: 32px;
+    }
+
+    .psychotherapy h3 {
+        font-size: 22px;
     }
 
     .section {
@@ -1141,69 +1130,75 @@ details p {
     .section-heading {
         text-align: left;
     }
+
     .psychotherapy-decoracao {
-    position: static;
-    display: block;
-    width: 320px;
-    height: auto;
-    margin: 0 auto 20px;
-    transform: none;
+        position: static;
+        display: block;
+        width: 320px;
+        height: auto;
+        margin: 0 auto 20px;
+        transform: none;
     }
+
     .gestalt-inner {
-    max-width: 100%;
-    width: 100%;
-    padding-right: 0;
-    margin: 0 auto;
-    text-align: left;
+        max-width: 100%;
+        width: 100%;
+        padding-right: 0;
+        margin: 0 auto;
+        text-align: left;
     }
 
     .gestalt-inner h2,
     .gestalt-inner h3,
     .gestalt-inner p {
-    max-width: 100%;
-    width: 100%;
-    overflow-wrap: break-word;
+        max-width: 100%;
+        width: 100%;
+        overflow-wrap: break-word;
         padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .gestalt-inner p {
         text-align: justify;
     }
 
     .gestalt-decoracao {
-    position: static;
-    display: block;
-    width: 180px;
-    height: auto;
-    margin: 20px auto;
-    transform: none;
+        position: static;
+        display: block;
+        width: 180px;
+        height: auto;
+        margin: 20px auto;
+        transform: none;
     }
 
     .services .cards {
-    grid-template-columns: 1fr;
-    gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .service-card {
-    min-height: auto;
-    padding: 30px 25px;
+        min-height: auto;
+        padding: 30px 25px;
     }
 
     .concerns-decoracao {
-    display: block;
-    position: static;
-    width: 200px;
-    height: auto;
-    margin: 25px auto 10px;
-    opacity: 0.7;
+        display: block;
+        position: static;
+        width: 140px;
+        height: auto;
+        margin: 25px auto 10px;
+        opacity: 0.7;
     }
+
     .concerns-end {
-    position: static;
-    left: auto;
-    width: 100%;
-    max-width: 100%;
-    margin: 25px 0 0;
-    text-align: center;
-    box-sizing: border-box;
+        position: static;
+        left: auto;
+        width: 100%;
+        max-width: 100%;
+        margin: 25px 0 0;
+        text-align: center;
+        box-sizing: border-box;
     }
 
 
@@ -1266,11 +1261,7 @@ details p {
     }
 
     .hero h1 {
-        font-size: clamp(35px,9vw,48px);
-    }
-
-    .hero-copy > p {
-        font-size: 16px;
+        font-size: clamp(35px, 9vw, 48px);
     }
 
     .hero-note {
@@ -1288,15 +1279,10 @@ details p {
         font-size: 16px;
     }
 
-    .hero-paragraph {
-        font-size: 15px;
-    }
-
     /* SOBRE A PSICOTERAPIA */
-    .psychotherapy-inner p,.concerns-intro p {
-        font-size: 16px;
+    .psychotherapy-inner p,
+    .concerns-intro p {
         margin: 0 0 8px;
-        line-height: 1.4;
     }
 
     .psychotherapy {
@@ -1304,16 +1290,14 @@ details p {
     }
 
     .psychotherapy .container {
-    position: relative;
+        position: relative;
     }
 
 
     .psychotherapy p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 0 0 12px;
-    max-width: 680px;
-    text-align: justify;
+        margin: 0 0 12px;
+        max-width: 680px;
+        text-align: justify;
     }
 
     /* GESTALT-TERAPIA */
@@ -1334,13 +1318,12 @@ details p {
     }
 
     .gestalt-inner h3 {
-    margin-bottom: 20px;
+        margin-bottom: 20px;
     }
-    
+
 
     .gestalt-inner p {
-    margin: 0 0 8px;
-    line-height: 1.5;
+        margin: 0 0 8px;
     }
 
     /* QUANDO PROCURAR PSICOTERAPIA */
@@ -1353,8 +1336,7 @@ details p {
         padding-bottom: 45px;
     }
 
-    #queixas .concerns-intro p,
-        #queixas .concerns-end {
+    #queixas .concerns-end {
         font-size: 16px;
         text-align: justify;
     }
@@ -1382,31 +1364,31 @@ details p {
 
     /* Título: MODALIDADES DE ATENDIMENTO */
     .services .section-heading h2 {
-    font-size: 42px;
-    line-height: 1.15;
-    margin-bottom: 20px;
+        font-size: 42px;
+        line-height: 1.15;
+        margin-bottom: 20px;
     }
 
     /* Subtítulo: Psicoterapia presencial e online */
     .services .section-heading h3 {
-    font-size: 24px;
-    margin-bottom: 0;
+        font-size: 24px;
+        margin-bottom: 0;
     }
 
     /* Espaçamento entre os títulos e os cards */
     .services .section-heading {
-    margin-bottom: 30px;
+        margin-bottom: 30px;
     }
 
     /* Ajustes para celular */
     @media (max-width: 720px) {
-    .services .section-heading h2 {
-        font-size: 32px;
-    }
+        .services .section-heading h2 {
+            font-size: 32px;
+        }
 
-    .services .section-heading h3 {
-        font-size: 20px;
-    }
+        .services .section-heading h3 {
+            font-size: 20px;
+        }
     }
 
     .service-card {
@@ -1444,11 +1426,6 @@ details p {
 
     .footer-inner > p {
         margin-top: 20px;
-    }
-
-    /* COMPONENTES COMPARTILHADOS */
-    .intro-band p {
-        font-size: 20px;
     }
 }
 
